@@ -3,19 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empleados</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Gráficas</title>
 </head>
+<header>
+    <h1>Gráficas</h1>
+</header>
 <body>
-    
-    <h1>Formulario empleados</h1><br>
-    <form method="POST" action="objeto.php">
-        <label for="first_name">Nombre: </label>
-        <input type="text" name = "name"><br>
-        <label for="last_name">Apellido: </label>
-        <input type="text" name = "lastname"><br>
-        <label for="age">Edad: </label>
-        <input type="number" name = "age"><br>
-        <input type="submit" value = "ENVIAR"><br>
-    </form>
+    <section>
+        <div>
+          <h1>Calidad de aire Bogotá</h1>
+            <canvas id="myChart"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            const ctx = document.getElementById('myChart');
+          
+            new Chart(ctx, {
+              type: 'pie',
+              data: {
+                labels: ['Muy mala', 'Mala', 'Moderada', 'Buena', 'Muy buena'],
+                datasets: [{
+                  label: 'Localidades con este nivel de contaminación',
+                  data: [1, 3, 5, 4, 7],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+          <div>
+            <h1>Calidad de aire por localidades Bogotá</h1>
+            <canvas id="myChart2"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            const ctx2 = document.getElementById('myChart2');
+          
+            new Chart(ctx2, {
+              type: 'doughnut',
+              data: {
+                labels: ['Antonio Nariño', 'Barrios Unidos', 'Bosa', 'Chapinero', 'Ciudad Bolivar', 'Engativá', 'Fontibón', 'Kennedy','La Candelaria',
+                'Los Mártires','Puente Aranda','Rafael Uribe Uribe','San Cristóbal', 'Santa Fe','Suba','Sumapaz','Teusaquillo','Tunjuelito','Usaquén','Usme'],
+                datasets: [{
+                  label: 'Ranking de contaminación',
+                  data: [5, 5, 8, 2, 7, 1, 2, 5, 2, 5, 3, 7, 4, 1, 3,4, 10, 2, 3, 11],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+    </section>
+    <section>
+          <div>
+            <h1>Cantidad de árboles Bogotá</h1>
+            <canvas id="myChart3"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            const ctx3 = document.getElementById('myChart3');
+          
+            new Chart(ctx3, {
+              type: 'radar',
+              data: {
+                labels: ['Antonio Nariño', 'Barrios Unidos', 'Bosa', 'Chapinero', 'Ciudad Bolivar', 'Engativá', 'Fontibón', 'Kennedy','La Candelaria',
+                'Los Mártires','Puente Aranda','Rafael Uribe Uribe','San Cristóbal', 'Santa Fe','Suba','Sumapaz','Teusaquillo','Tunjuelito','Usaquén','Usme'],
+                datasets: [{
+                  label: 'Ranking de contaminación',
+                  data: [15, 15, 18, 12, 17, 11, 12, 15, 12, 15, 13,17, 14, 11, 13,14, 10, 12, 13, 11],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+          <div>
+            <h1>Cantidad de árboles por localidades Bogotá</h1>
+            <canvas id="myChart4"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+          
+          <script>
+            const ctx4 = document.getElementById('myChart4');
+          
+            new Chart(ctx4, {
+              type: 'polarArea',
+              data: {
+                labels: ['Antonio Nariño', 'Barrios Unidos', 'Bosa', 'Chapinero', 'Ciudad Bolivar', 'Engativá', 'Fontibón', 'Kennedy','La Candelaria',
+                'Los Mártires','Puente Aranda','Rafael Uribe Uribe','San Cristóbal', 'Santa Fe','Suba','Sumapaz','Teusaquillo','Tunjuelito','Usaquén','Usme'],
+                datasets: [{
+                  label: 'Ranking de contaminación',
+                  data: [15, 15, 18, 12, 17, 11, 12, 15, 12, 15, 13,17, 14, 11, 13,14, 10, 12, 13, 11],
+                  borderWidth: 1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true
+                  }
+                }
+              }
+            });
+          </script>
+    </section> 
 </body>
 </html>
