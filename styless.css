@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header > h1{
+    background-color: #bfd8d5;
+    color: #ffff;
+    text-align: center;
+    padding: 1%;
+    font-size: 70px;
+}
+
+section{
+    display: flex;
+    padding-inline: 13%;
+}
+
+section > div{
+    align-items: center;
+    width: 50%;
+
+}
+
+section > div > div{
+    margin-inline: 80px;
+    margin-block: 40px;
+}
+
+section > div > div > h1{
+    text-align: center;
+}
+
+section > div > div > canvas{
+    margin-top: 10px;
+}
