@@ -1,5 +1,4 @@
 <?php
-
     require_once 'conexion.php';
     class Personaje{
         private $id;
@@ -31,7 +30,7 @@
             $this->id = $id;
         }
 
-        public funtion guardar(){
+        public function guardar(){
             $conexion = new Conexion();
             {
                 $consulta = $conexion -> prepare('INSERT INTO' . self::TABLA . '(nombre, apellido) VALUES(:nombre, :apellido)');
@@ -42,7 +41,18 @@
             }
             $conexion = null;
         }
+        public static function recuperarTodos(){
+                $conexion = new Conexion();
+            
+                $consulta = $conexion->prepare('SELECT * FROM ' . self::TABLA .'');
+            
+                    $consulta->execute();
+                    $registros = $consulta->fetchAll();  
 
+                return $registros;
+            
+        }
     }
+        
 
 ?>
