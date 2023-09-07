@@ -5,9 +5,10 @@
 <html>
 <head></head>
 <body></body>
-    <ul></ul>
-    <?php foreach($personajes as $items);?>
+    <ul>
+    <?php foreach($personajes as $item):?>
     <li><?php echo $item['id'].' - '. $item['nombre'].' - '. $item['apellido']; ?> </li>
     <?php endforeach; ?>
+    </ul>
 </body>
 </html>
